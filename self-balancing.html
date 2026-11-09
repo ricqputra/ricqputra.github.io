@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Desain dan Implemenasi Autotuning PID menggunakan Fuzzy Logic Control pada Self-Balancing Robot - Ricky Putra Pratama</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets\img\vecteezy_register-mark-icon-isolated-on-white-background_24651962.jpg" rel="icon">
+  <link href="assets\img\vecteezy_register-mark-icon-isolated-on-white-background_24651962.jpg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Craftivo
+  * Template URL: https://bootstrapmade.com/craftivo-bootstrap-portfolio-template/
+  * Updated: Oct 04 2025 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Ricky Putra Pratama</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#portfolio">Back</a></li>
+          <!--<li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>-->
+          <!--<li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>-->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Desain dan Implementasi Autotuning PID menggunakan Fuzzy Logic Control pada Self-Balancing Robot</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <!-- Section Title -->
+      <!--<div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Portfolio Details</span>
+        <h2>Portfolio Details</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-8">
+
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 4000
+                  },
+                  "slidesPerView": 1,
+                  "spaceBetween": 0,
+                  "effect": "fade",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\1.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\2.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\3.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\4.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\5.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\6.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\self_balancing\7.jpg" alt="Portfolio Image" class="img-fluid">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="portfolio-content" data-aos="fade-up" data-aos-delay="200">
+              <h2>Desain dan Implementasi Autotuning PID menggunakan Fuzzy Logic Control pada Self-Balancing Robot</h2>
+
+              <div class="meta-info">
+                <span class="date"><i class="bi bi-calendar"></i> 13 Juli 2026</span>
+                <span class="category"><i class="bi bi-tag"></i> Embedded Systems & Electronics</span>
+                <span class="client"><i class="bi bi-building"></i> Personal Project</span>
+              </div>
+
+              <h3>Project Overview</h3>
+              <p>
+                Proyek ini berfokus pada perancangan dan implementasi robot penyeimbang otomatis (self-balancing robot) menggunakan metode autotuning PID berbasis Fuzzy Logic. Sistem ini dirancang untuk meningkatkan kestabilan robot dengan menyesuaikan parameter PID (Kp, Ki, dan Kd) secara otomatis berdasarkan nilai error dan perubahan error sudut kemiringan robot.
+              </p>
+              <p>Menggunakan mikrokontroler ESP32 dan sensor MPU6050 untuk membaca orientasi robot secara real-time. Metode Fuzzy Logic digunakan untuk menentukan penyesuaian parameter PID agar robot mampu mempertahankan keseimbangan, termasuk saat beroperasi pada lintasan miring.</p>
+
+              <div class="highlights-box">
+                <h4>Key Highlights</h4>
+                <ul>
+                  <li><i class="bi bi-check-circle"></i> Pengukuran sudut kemiringan secara real-time menggunakan MPU6050.</li>
+                  <li><i class="bi bi-check-circle"></i> Penyesuaian parameter PID otomatis menggunakan Fuzzy Logic.</li>
+                  <li><i class="bi bi-check-circle"></i> Sistem kendali tertanam berbasis ESP32.</li>
+                  <li><i class="bi bi-check-circle"></i> Pengendalian motor DC untuk menjaga keseimbangan robot.</li>
+                  <li><i class="bi bi-check-circle"></i> Dapat bertahan hingga 15° dari sudut acuan</li>
+                </ul>
+              </div>
+
+              <h3>System Workflow</h3>
+
+              <h6>1. Sensor Acquisition</h6>
+              <p>Sensor MPU6050 membaca data akselerometer dan giroskop untuk memperoleh informasi orientasi serta pergerakan robot.</p>
+
+              <h6>2. Data Processing</h6>
+              <p>ESP32 memproses data sensor untuk memperoleh sudut kemiringan robot sebagai dasar perhitungan sistem kendali.</p>
+
+              <h6>3. Fuzzy Logic Controller</h6>
+              <p>Nilai error dan delta error menjadi masukan sistem Fuzzy Logic. Proses fuzzifikasi, evaluasi aturan, dan defuzzifikasi digunakan untuk menentukan parameter PID.</p>
+
+              <h6>4. PID Control</h6>
+              <P>Parameter Kp, Ki, dan Kd digunakan dalam perhitungan kendali untuk menghasilkan respons koreksi berdasarkan kondisi robot.</P>
+
+              <h6>5. Motor Actuation</h6>
+              <p>Sinyal kendali diteruskan melalui driver L298N untuk mengatur arah dan kecepatan motor DC.</p>
+
+              <h6>6. Feedback Control</h6>
+              <p>Sensor kembali membaca perubahan orientasi robot sehingga sistem dapat melakukan koreksi secara berkelanjutan.</p>
+
+              <blockquote>
+                <h4>Hardware</h4>
+                <p> </p>
+                <p>1. ESP32 Development Board</p>
+                <p>2. MPU6050 Accelerometer & Gyroscope</p>
+                <p>3. L298N Motor Driver</p>
+                <p>4. DC Gear Motor</p>
+                <p>5. Battery Li-ion 3.7V</p>
+                <p>6. Acrylic (Robot Frame)</p>
+                <h4>Software & Methods</h4>
+                <p> </p>
+                <p>1. Arduino IDE</p>
+                <p>2. MATLAB Fuzzy Logic Designer</p>
+                <p>3. PID Control Algorithm</p>
+                <p>4. Fuzzy Logic Controller</p>
+                <p>5. Embedded C/C++</p>
+
+
+                <!--<div class="author">
+                  <img src="assets/img/person/person-m-7.webp" alt="Author">
+                  <div class="author-info">
+                    <h5>Michael Anderson</h5>
+                    <span>Project Lead</span>
+                  </div>
+                </div>-->
+              </blockquote>
+
+              <h3>Project Objective</h3>
+              <p>Pengembangan proyek ini ditujukan untuk memahami dan mengimplementasikan sistem kendali adaptif pada robot bergerak, khususnya melalui integrasi sensor, mikrokontroler, algoritma PID, dan Fuzzy Logic.</p>
+              <p>Selain itu, proyek ini menjadi penerapan praktis konsep sistem kendali, elektronika, dan embedded systems dalam membangun perangkat robotika yang mampu mempertahankan keseimbangan secara otomatis.</p>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="sidebar" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="info-card">
+                <h3>Project Details</h3>
+                <div class="info-item">
+                  <span class="label">Client</span>
+                  <span class="value">Personal Project</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Category</span>
+                  <span class="value">Embedded Systems, Automation</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Date</span>
+                  <span class="value">13 Juli 2026</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Duration</span>
+                  <span class="value">5 Bulan</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Technologies</span>
+                  <span class="value">Arduino, C++, PLC, Fuzzy</span>
+                </div>
+                <!--<a href="https://www.example.com" class="btn-primary" target="_blank">
+                  <i class="bi bi-box-arrow-up-right"></i> View Live Project
+                </a>-->
+              </div>
+
+              <div class="share-card" data-aos="fade-up" data-aos-delay="300">
+                <h3>Share This Project</h3>
+                <div class="social-links">
+                  <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="pinterest"><i class="bi bi-pinterest"></i></a>
+                </div>
+              </div>
+
+              <div class="tags-card" data-aos="fade-up" data-aos-delay="400">
+                <h3>Tags</h3>
+                <div class="tags">
+                  <a href="#">Arduino</a>
+                  <a href="#">C++</a>
+                  <a href="#">PLC</a>
+                  <a href="#">Fuzzy</a>
+                  <a href="#">Automation</a>
+                  <a href="#">WebSocket</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Ricky Putra Pratama</span>
+          </a>
+          <p></p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://api.whatsapp.com/send/?phone=6282265016860&text&type=phone_number&app_absent=0"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ricqputra54@gmail.com"><i class="bi bi-envelope-at"></i></a>
+            <a href="https://www.instagram.com/r.kyputra/"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/in/RickyPutraPratama"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/ricqputra"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!--<div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>-->
+        
+        <!--<div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact</h4>
+          <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div>-->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ricky Putra Pratama</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
